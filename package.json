@@ -1,25 +1,25 @@
 {
-  "name": "cordova.plugin.ionic.applewatch",
+  "name": "cordova.plugin.apple.watch",
   "version": "0.0.1",
   "description": "",
   "cordova": {
-    "id": "cordova.plugin.ionic.applewatch",
+    "id": "cordova.plugin.apple.watch",
     "platforms": [
       "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plbolduc/cordova-plugin-watchconnectivity.git"
+    "url": "git+https://github.com/plbolduc/cordova_apple_watch.git"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-ios"
   ],
   "author": "",
-  "license": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues"
+    "url": "https://github.com/plbolduc/cordova_apple_watch/issues"
   },
-  "homepage": "https://github.com/plbolduc/cordova-plugin-watchconnectivity#readme"
+  "homepage": "https://github.com/plbolduc/cordova_apple_watch#readme"
 }

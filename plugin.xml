@@ -1,30 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova.plugin.ionic.applewatch" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="cordova.plugin.apple.watch" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova.plugin.apple.watch</name>
+    <description>AppleWatch</description>
+    <license></license>
+    <keywords>cordova,applewatch</keywords>
+    <repo>https://github.com/plbolduc/cordova_apple_watch.git</repo>
+    <issue>https://github.com/plbolduc/cordova_apple_watch/issues</issue>
+    <author></author>
 
-  <name>ApplewatchConn</name>
-  <description>ApplewatchConn</description>
-  <license></license>
-  <keywords>cordova,applewatch</keywords>
-  <repo>git+https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
-  <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
-  <author></author>
+    <engines>
+        <engine name="cordova" version=">=6.0.0"/>
+    </engines>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.1"/>
-  </engines>
+    <js-module name="AppleWatch" src="www/AppleWatch.js">
+        <clobbers target="AppleWatch"/>
+    </js-module>
 
-  <js-module src="www/watchconnectivity.js" name="ApplewatchConn">
-    <clobbers target="ApplewatchConn" />
-  </js-module>
+    <platform name="ios">
 
-  <platform name="ios">
-    <config-file target="config.xml" parent="/*">
-      <feature name="ApplewatchConn">
-        <param name="ios-package" value="ApplewatchConn" onload="true" />
-      </feature>
-    </config-file>
-    <header-file src="src/ios/CDVIonicApplewatchConn.h"/>
-    <source-file src="src/ios/CDVIonicApplewatchConn.m"/>
-  </platform>
+        <config-file parent="/*" target="config.xml">
+            <feature name="AppleWatch">
+                <param name="ios-package" value="AppleWatch" onload="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/AppleWatch.h"/>
+        <source-file src="src/ios/AppleWatch.m"/>
+    </platform>
 </plugin>
