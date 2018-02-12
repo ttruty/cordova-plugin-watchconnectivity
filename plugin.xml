@@ -2,11 +2,11 @@
 <plugin id="cordova.plugin.ionic.applewatch" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <name>cordova.plugin.ionic.applewatch</name>
+  <name>ApplewatchConn</name>
   <description>ApplewatchConn</description>
   <license></license>
   <keywords>cordova,applewatch</keywords>
-  <repo>https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
+  <repo>git+https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
   <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
   <author></author>
 
@@ -24,7 +24,7 @@
         <param name="ios-package" value="ApplewatchConn" onload="true" />
       </feature>
     </config-file>
-    <header-file src="src/ios/CDVIonicApplewatchConn.h" target-dir="WCPlugin"/>
-    <source-file src="src/ios/CDVIonicApplewatchConn.m" target-dir="WCPlugin"/>
+    <header-file src="src/ios/CDVIonicApplewatchConn.h"/>
+    <source-file src="src/ios/CDVIonicApplewatchConn.m"/>
   </platform>
 </plugin>
