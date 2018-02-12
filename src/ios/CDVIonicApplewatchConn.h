@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 #import <WatchConnectivity/WatchConnectivity.h>
-@interface WCiOS : CDVPlugin <WCSessionDelegate>
+@interface CDVIonicApplewatchConn : CDVPlugin <WCSessionDelegate>
 {
     NSString *messageReceiver;
     NSString *messageString;

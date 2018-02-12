@@ -1,24 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.spansystems.watchconnectivity"
-        version="1.1.2">
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.plugin.ionic.applewatch" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-  <name>WatchConnectivity</name>
+  <name>cordova.plugin.ionic.applewatch</name>
+  <description>WatchConnectivity</description>
+  <license></license>
+  <keywords>cordova,applewatch</keywords>
+  <repo>https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
+  <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
+  <author></author>
+
   <engines>
     <engine name="cordova" version=">=3.4.1"/>
   </engines>
+
   <asset src="www/watchconnectivity.js" target="js/watchconnectivity.js"/>
-  <js-module src="www/watchconnectivity.js" name="sswc">
-    <clobbers target="sswc" />
+
+  <js-module src="www/watchconnectivity.js" name="applewatchConn">
+    <clobbers target="applewatchConn" />
   </js-module>
+
   <platform name="ios">
-    <config-file target="config.xml" parent="/widget">
-      <feature name="WatchConnectivity">
-        <param name="ios-package" value="WCiOS" />
+    <config-file target="config.xml" parent="/*">
+      <feature name="applewatchConn">
+        <param name="ios-package" value="applewatchConn" onload="true" />
       </feature>
     </config-file>
-    <header-file src="src/ios/WCiOS.h" target-dir="WCPlugin"/>
-    <source-file src="src/ios/WCiOS.m" target-dir="WCPlugin"/>
-    <framework src="WatchConnectivity.framework" />
+    <header-file src="src/ios/CDVIonicApplewatchConn.h" target-dir="WCPlugin"/>
+    <source-file src="src/ios/CDVIonicApplewatchConn.m" target-dir="WCPlugin"/>
   </platform>
 </plugin>

@@ -1,13 +1,20 @@
-/*global cordova, module*/
+var exec = require('cordova/exec');
 
-module.exports = {
-    init: function (successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "WatchConnectivity", "init", []);
-    },
-    messageReceiver: function (onNewMessageCallback, errorCallback) {
-        cordova.exec(onNewMessageCallback, errorCallback, "WatchConnectivity", "messageReceiver", []);
-    },
-    sendMessage: function (message, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "WatchConnectivity", "sendMessage", [message]);
-    }
+
+//apple watch class
+var ApplewatchConn = function(){};
+
+ApplewatchConn.init = function (successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "AppleWatch", "init", []);
 };
+
+ApplewatchConn.messageReceiver = function (onNewMessageCallback, errorCallback) {
+    exec(onNewMessageCallback, errorCallback, "AppleWatch", "messageReceiver", []);
+};
+
+ApplewatchConn.sendMessage = function (message, successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "AppleWatch", "sendMessage", [message]);
+};
+
+
+module.exports = ApplewatchConn;
