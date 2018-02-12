@@ -1,21 +1,19 @@
-# Cordova Watch Connectivity Plugin
+# Ionic Cordova Watch Connectivity Plugin
 
-Simple plugin that establishes iOS Watch Connectivity session with Watch OS 2 and helps exchange of messages between an iPhone hybrid application and its iWatch application.
+Simple plugin that establishes iOS Watch Connectivity session with Watch OS and helps exchange of messages between an iPhone ionic application and its iWatch application.
 
 ## Installation
 
-### With cordova-cli
+### With Ionic cordova-cli
 
-If you are using [cordova-cli](https://github.com/apache/cordova-cli), install
+If you are using [cordova-cli](https://ionicframework.com/docs/cli/cordova/plugin/), install
 with:
 
-    cordova plugin add https://github.com/DVenkatesh/cordova-plugin-watchconnectivity.git
+    ionic cordova plugin add https://github.com/plbolduc/cordova-plugin-watchconnectivity.git
 
-### With plugman
-
-With a plain [plugman](https://github.com/apache/cordova-plugman), you should be able to install with something like:
-
-    plugman --platform <ios> --project <directory> --plugin https://github.com/DVenkatesh/cordova-plugin-watchconnectivity.git
+You can remove the plugin with :
+    
+    ionic cordova plugin remove cordova.plugin.ionic.applewatch
 
 ## Use from Javascript
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
