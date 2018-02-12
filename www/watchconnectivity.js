@@ -5,15 +5,15 @@ var exec = require('cordova/exec');
 var ApplewatchConn = function(){};
 
 ApplewatchConn.init = function (successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "CDVIonicApplewatchConn", "init", []);
+    exec(successCallback, errorCallback, "WatchConnectivity", "init", []);
 };
 
 ApplewatchConn.messageReceiver = function (onNewMessageCallback, errorCallback) {
-    exec(onNewMessageCallback, errorCallback, "CDVIonicApplewatchConn", "messageReceiver", []);
+    exec(onNewMessageCallback, errorCallback, "WatchConnectivity", "messageReceiver", []);
 };
 
 ApplewatchConn.sendMessage = function (message, successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "CDVIonicApplewatchConn", "sendMessage", [message]);
+    exec(successCallback, errorCallback, "WatchConnectivity", "sendMessage", [message]);
 };
 
 
