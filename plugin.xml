@@ -5,8 +5,8 @@
     <description>AppleWatch</description>
     <license></license>
     <keywords>cordova,applewatch</keywords>
-    <repo>https://github.com/plbolduc/cordova_apple_watch.git</repo>
-    <issue>https://github.com/plbolduc/cordova_apple_watch/issues</issue>
+    <repo>https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
+    <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
     <author></author>
 
     <engines>

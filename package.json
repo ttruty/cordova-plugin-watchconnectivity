@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plbolduc/cordova_apple_watch.git"
+    "url": "git+https://github.com/plbolduc/cordova-plugin-watchconnectivity.git"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-ios"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/plbolduc/cordova_apple_watch/issues"
+    "url": "https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues"
   },
-  "homepage": "https://github.com/plbolduc/cordova_apple_watch#readme"
+  "homepage": "https://github.com/plbolduc/cordova-plugin-watchconnectivity#readme"
 }
