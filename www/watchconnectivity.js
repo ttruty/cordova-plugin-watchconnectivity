@@ -6,6 +6,7 @@ var PLUGIN_NAME = 'AppleWatchConnectivity';
 var AppleWatchConnectivity = function(){};
 
 AppleWatchConnectivity.init = function (successCallback, errorCallback) {
+    console.log("TEST");
     exec(successCallback, errorCallback, PLUGIN_NAME, "init", []);
 };
 
