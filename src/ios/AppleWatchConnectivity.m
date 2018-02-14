@@ -1,6 +1,6 @@
-#import "CDVIonicApplewatchConn.h"
+#import "AppleWatchConnectivity.h"
 
-@implementation CDVIonicApplewatchConn
+@implementation AppleWatchConnectivity
 @synthesize messageReceiver;
 @synthesize messageString;
 - (void)init:(CDVInvokedUrlCommand*)command

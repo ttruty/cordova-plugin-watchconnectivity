@@ -24,7 +24,7 @@
                 <param name="ios-package" value="AppleWatchConnectivity" onload="true" />
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVIonicApplewatchConn.h"/>
-        <source-file src="src/ios/CDVIonicApplewatchConn.m"/>
+        <header-file src="src/ios/AppleWatchConnectivity.h"/>
+        <source-file src="src/ios/AppleWatchConnectivity.m"/>
     </platform>
 </plugin>
