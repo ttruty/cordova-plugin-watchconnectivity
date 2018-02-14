@@ -1,9 +1,9 @@
 {
-  "name": "cordova.plugin.apple.watch",
+  "name": "cordova-plugin-applewatch-connectivity",
   "version": "0.0.1",
   "description": "",
   "cordova": {
-    "id": "cordova.plugin.apple.watch",
+    "id": "cordova-plugin-applewatch-connectivity",
     "platforms": [
       "ios"
     ]

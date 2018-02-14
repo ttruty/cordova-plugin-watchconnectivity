@@ -1,8 +1,6 @@
-/********* AppleWatch.m Cordova Plugin Implementation *******/
+#import <Cordova/CDVPlugin.h>
 
-#import <Cordova/CDV.h>
-#import <WatchConnectivity/WatchConnectivity.h>
-@interface AppleWatch : CDVPlugin <WCSessionDelegate>
+@interface CDVIonicApplewatchConn : CDVPlugin <WCSessionDelegate>
 {
     NSString *messageReceiver;
     NSString *messageString;
