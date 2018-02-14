@@ -4,7 +4,6 @@ var exec = require('cordova/exec');
 var AppleWatchConnectivity = function(){};
 
 AppleWatchConnectivity.init = function (successCallback, errorCallback) {
-    console.log("TEST");
     exec(successCallback, errorCallback, "AppleWatchConnectivity", "init", []);
 };
 

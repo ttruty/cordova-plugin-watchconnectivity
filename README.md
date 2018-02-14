@@ -15,7 +15,22 @@ You can remove the plugin with :
     
     ionic cordova plugin remove cordova-plugin-applewatch-connectivity
 
-<i>*If you are not able to pull from git on Windows try using Git Bash</i> 
+<i>*If you are not able to pull from git on Windows try using [Git Bash](https://gitforwindows.org/)</i> 
+
+## Xcode configuration
+
+Add the platform to your ionic project
+
+    ionic cordova platform add ios
+    
+Add applekit to your project in Xcode : 
+
+    File -> new -> Target -> WatchOs -> Watchkit app
+
+*After that you wont be able to run the command build, because cordova does'nt know about this platform. Instead run the command prepre.
+
+    ionic cordova platform prepare
+
 
 ## Use from Javascript
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
@@ -94,6 +109,7 @@ func sendMessage:(message: String) -> Void{
 ## Credits
 Written by [Venkatesh D](https://www.linkedin.com/in/dvenkateshd) and [Vagish M M](http:///)
 
+Addapted for ionic support by Pierre-Luc Bolduc
 ## More Info
 TODO: The plugin is very simple and short without much error handling. This is developed for an immediate need and shall be upgraded to support other platforms with error handling and improved design. 
 
