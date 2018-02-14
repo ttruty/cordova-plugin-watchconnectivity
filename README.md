@@ -13,7 +13,9 @@ with:
 
 You can remove the plugin with :
     
-    ionic cordova plugin remove cordova.plugin.ionic.applewatch
+    ionic cordova plugin remove cordova-plugin-applewatch-connectivity
+
+<i>*If you are not able to pull from git on Windows try using Git Bash</i> 
 
 ## Use from Javascript
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`

@@ -1,4 +1,5 @@
 #import <Cordova/CDVPlugin.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
 @interface CDVIonicApplewatchConn : CDVPlugin <WCSessionDelegate>
 {
