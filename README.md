@@ -27,7 +27,7 @@ Add applekit to your project in Xcode :
 
     File -> new -> Target -> WatchOs -> Watchkit app
 
-*After that you wont be able to run the command build, because cordova does'nt know about this platform. Instead run the command prepre.
+*After that you wont be able to run the command build, because cordova doesn't know about this platform. Instead run the command prepre.
 
     ionic cordova platform prepare
 
