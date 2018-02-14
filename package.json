@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-applewatch-connectivity",
+  "name": "AppleWatchConnectivity",
   "version": "0.0.1",
   "description": "",
   "cordova": {
