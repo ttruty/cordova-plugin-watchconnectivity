@@ -10,7 +10,7 @@
     <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
 
     <engines>
-        <engine name="cordova" version=">=6.0.0"/>
+        <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
     <js-module name="watchconnectivity" src="www/watchconnectivity.js">
