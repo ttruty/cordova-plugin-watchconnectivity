@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-applewatch-connectivity"
         version="0.0.1">
-    <name>Apple Watch Connectivity plugin</name>
+    <name>AppleWatchConnectivity</name>
     <description>Communicate with an apple watch</description>
     <license>NONE</license>
     <keywords>cordova,applewatch,ionic</keywords>
@@ -13,7 +13,7 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
-    <js-module name="watchconnectivity" src="www/watchconnectivity.js">
+    <js-module name="AppleWatchConnectivity" src="www/watchconnectivity.js">
         <!-- window variable name wanted, window.myVariable -->
         <clobbers target="AppleWatchConnectivity"/>
     </js-module>
