@@ -32,6 +32,10 @@ Add applekit to your project in Xcode :
     ionic cordova platform prepare
 
 
+XcodeBuild error : Cordova/CDV.h not found is caused because 
+
+To solve it go to your watchkit Extension setting -> Build Setting and remove the string in Objective-c Bridging header
+
 ## Use from Javascript
 Edit `www/js/index.js` and add the following code inside `onDeviceReady`
 ```js
