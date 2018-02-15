@@ -13,7 +13,7 @@ with:
 
 You can remove the plugin with :
     
-    ionic cordova plugin remove cordova-plugin-applewatch-connectivity
+    ionic cordova plugin rm cordova-plugin-applewatch-connectivity
 
 <i>*If you are not able to pull from git on Windows try using [Git Bash](https://gitforwindows.org/)</i> 
 
@@ -29,7 +29,7 @@ Add applekit to your project in Xcode :
 
 *After that you wont be able to run the command build, because cordova doesn't know about this platform. Instead run the command prepre.
 
-    ionic cordova platform prepare
+    ionic cordova prepare ios
 
 
 XcodeBuild error : Cordova/CDV.h not found is caused because 
