@@ -56,57 +56,77 @@ Edit `www/js/index.js` and add the following code inside `onDeviceReady`
     sswc.init(success, failure);
 ```
 ## Use from iWatch extension
-### Objective-C
-```objective-c
-// Setup and activate session in awakeWithContext or willActivate
-if ([WCSession isSupported]) {
-    WCSession *session = [WCSession defaultSession];
-    session.delegate = self;
-    [session activateSession];
-}
-// Implement didReceiveMessage WatchConnectivity handler/callback to receive incoming messages
-- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message replyHandler:(void(^)(NSDictionary<NSString *, id> *replyMessage))replyHandler {
-    NSString *message = [message objectForKey:@"message"];
-    NSLog(@"%@",message);
-    [self sendMessage:@"Message from iWatch"];
-}
-// Send message
-- (void)sendMessage:(NSString*)message {
-    NSDictionary *messageDictionary = [[NSDictionary alloc] initWithObjects:@[message] forKeys:@[@"message"]];
-    [[WCSession defaultSession] sendMessage:messageDictionary
-                               replyHandler:^(NSDictionary *reply) {
-                                   NSLog(@"Send message success");
-                               }
-                               errorHandler:^(NSError *error) {
-                                   NSLog(@"Send message failed");
-                               }
-     ];
-}
-```
+
 ### Swift
 ```swift
-// Setup and activate session in awakeWithContext or willActivate
-if WCSession.isSupported() {
-    let session = WCSession.defaultSession()
-    session.delegate = self
-    session.activateSession()
-}
-// Implement didReceiveMessage WatchConnectivity handler/callback to receive incoming messages
-func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
-    let message = message["message"] as? String
-    print(message)
-    self.sendMessage("Message from iWatch")
-}
-// Send message
-func sendMessage:(message: String) -> Void{
-    let message = ["message": message]
-    WCSession.defaultSession()!.sendMessage(["message": message], 
-                                replyHandler: { (response) -> Void in
-                                    print("Send message success")
-                                }, errorHandler: { (error) -> Void in
-                                    print("Send message failed")
-                                })
-     
+//
+//  InterfaceController.swift
+//
+//  Created by Pierre-Luc on 2018-02-14.
+//
+
+import WatchKit
+import Foundation
+import WatchConnectivity
+
+
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    
+    @IBOutlet var testLabel: WKInterfaceLabel!
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        // Configure interface objects here.
+        
+        if(WCSession.isSupported()){
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
+    }
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+        
+        if(WCSession.default.isReachable) {
+            let message = ["message" : "hellow word"]
+            
+            WCSession.default.sendMessage(message, replyHandler:
+                {(result) -> Void in
+                    
+                    print("Message sent!")
+                    
+                    
+            }, errorHandler:
+                
+                
+                {(error) -> Void in
+                
+                    print("Failed!")
+                    print(error)
+                
+                
+            })
+        }
+    }
+    
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        
+        let message = message["message"] as? String
+        
+        testLabel.setText(message)
+        
+    }
+    
 }
 ```
 
