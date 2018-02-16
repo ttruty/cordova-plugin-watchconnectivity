@@ -1,6 +1,5 @@
 //
 //  AppleWatchConnectivity.swift
-//  entraineur
 //
 //  Created by Pierre-Luc on 2018-02-15.
 //
@@ -19,7 +18,7 @@ import WatchConnectivity
         
     }
 
-
+    @objc(initConnectivity:)
     func initConnectivity(command: CDVInvokedUrlCommand) {
         
         var pluginResult = CDVPluginResult(
@@ -78,7 +77,8 @@ import WatchConnectivity
         )
     }
     
-    
+
+    @objc(sendMessage:)
     func sendMessage(command: CDVInvokedUrlCommand) {
         
         var pluginResult = CDVPluginResult(
