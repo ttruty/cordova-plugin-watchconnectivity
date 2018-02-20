@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="cordova-plugin-applewatch-connectivity"
-        version="0.0.1">
+        version="0.0.2">
     <name>AppleWatchConnectivity</name>
     <description>Communicate with an apple watch</description>
     <license>NONE</license>
@@ -24,8 +24,8 @@
                 <param name="ios-package" value="AppleWatchConnectivity" onload="true" />
             </feature>
         </config-file>
-        <source-file src="src/ios/AppleWatchConnectivity.swift"/>
-       <!-- <header-file src="src/ios/AppleWatchConnectivity.h"/>
-        <source-file src="src/ios/AppleWatchConnectivity.m"/> -->
+        <!-- <source-file src="src/ios/AppleWatchConnectivity.swift"/> -->
+       <header-file src="src/ios/AppleWatchConnectivity.h"/>
+       <source-file src="src/ios/AppleWatchConnectivity.m"/>
     </platform>
 </plugin>
