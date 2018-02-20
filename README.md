@@ -37,8 +37,53 @@ XcodeBuild error : Cordova/CDV.h not found is caused because
 To solve it go to your watchkit Extension setting -> Build Setting and remove the string in Objective-c Bridging header
 
 ## Use from Javascript
-Edit `www/js/index.js` and add the following code inside `onDeviceReady`
+Edit `src/app/app.component.ts` and add the following code 
 ```js
+    
+    declare var AppleWatchConnectivity: any;
+
+    //...
+    
+    export class MyApp {
+      rootPage:any = HomePage;
+    
+    
+    
+      constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+          
+        if (platform.is('cordova')) {
+            AppleWatchConnectivity.init(function () {
+        
+                console.log("Init success!");
+        
+                AppleWatchConnectivity.sendMessage("My first Message",
+                    function () {
+        
+                        console.log("Success callback");
+                    },
+                    function () {
+        
+                        console.log("Error callback");
+                    })
+        
+            }, function () {
+                //error
+                console.log("Init failed!");
+            });
+        
+        } else {
+            
+            // handle thing accordingly
+            console.log("not cordova platform");
+        }
+      }
+    }
+
+```
+
+Forked repo sample
+```js
+    
     var didReceiveMessage = function(message){
         var obj = JSON.parse(message);
         alert(obj.message);
