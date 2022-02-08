@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plbolduc/cordova-plugin-watchconnectivity.git"
+    "url": "git+https://github.com/ttruty/cordova-plugin-watchconnectivity.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -19,7 +19,8 @@
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues"
+    "url": "https://github.com/ttruty/cordova-plugin-watchconnectivity/issues"
+    
   },
-  "homepage": "https://github.com/plbolduc/cordova-plugin-watchconnectivity#readme"
+  "homepage": "https://github.com/ttruty/cordova-plugin-watchconnectivity#readme"
 }

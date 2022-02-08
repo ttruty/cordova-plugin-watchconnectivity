@@ -2,6 +2,9 @@
 
 Simple plugin that establishes iOS Watch Connectivity session with Watch OS and helps exchange of messages between an iPhone ionic application and its iWatch application.
 
+> Forked from Pierre-Luc Bolduc [here](https://github.com/plbolduc/cordova-plugin-watchconnectivity)
+- Updated to use Capacitor
+
 ## Installation
 
 ### With Ionic cordova-cli
@@ -9,11 +12,15 @@ Simple plugin that establishes iOS Watch Connectivity session with Watch OS and 
 If you are using [cordova-cli](https://ionicframework.com/docs/cli/cordova/plugin/), install
 with:
 
-    ionic cordova plugin add https://github.com/plbolduc/cordova-plugin-watchconnectivity.git
+    ionic cordova plugin add https://github.com/ttruty/cordova-plugin-watchconnectivity.git
+
+### If using Capacitor 
+    npm install https://github.com/ttruty/cordova-plugin-watchconnectivity.git
 
 You can remove the plugin with :
     
     ionic cordova plugin rm cordova-plugin-applewatch-connectivity
+    npm uninstall cordova-plugin-applewatch-connectivity
 
 <i>*If you are not able to pull from git on Windows try using [Git Bash](https://gitforwindows.org/)</i> 
 
@@ -175,8 +182,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 }
 ```
 
-## Credits
-Written by [Venkatesh D](https://www.linkedin.com/in/dvenkateshd) and [Vagish M M](http:///)
 
 Addapted for ionic support by Pierre-Luc Bolduc
 ## More Info
