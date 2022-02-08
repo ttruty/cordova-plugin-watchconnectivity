@@ -4,10 +4,10 @@
         version="0.0.2">
     <name>AppleWatchConnectivity</name>
     <description>Communicate with an apple watch</description>
-    <license>NONE</license>
+    <license>MIT</license>
     <keywords>cordova,applewatch,ionic</keywords>
-    <repo>https://github.com/plbolduc/cordova-plugin-watchconnectivity.git</repo>
-    <issue>https://github.com/plbolduc/cordova-plugin-watchconnectivity/issues</issue>
+    <repo>https://github.com/ttruty/cordova-plugin-watchconnectivity.git</repo>
+    <issue>https://github.com/ttruty/cordova-plugin-watchconnectivity/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
