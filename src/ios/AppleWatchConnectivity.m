@@ -19,13 +19,33 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
     }];
 }
+// It gets invoked when a message is received by didReceiveMessage
+// or alternatively through didReceiveApplicationContext
 - (void)messageReceiver:(CDVInvokedUrlCommand*)command {
+    NSLog(@"WatchConnectivity :: messageReceiver");
     self.messageReceiver = [command callbackId];
 }
+
+// Received a message from WCSession.default.sendMessage
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message replyHandler:(void(^)(NSDictionary<NSString *, id> *replyMessage))replyHandler {
     dispatch_async(dispatch_get_main_queue(), ^{
-        replyHandler([[NSDictionary alloc] initWithObjects:@[self.messageString?self.messageString:@""] forKeys:@[@"message"]]);
+        NSLog(@"WatchConnectivity :: didReceiveMessage :: replyHandler :: msg: %@", message);
+        CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsDictionary : message];
+        [pluginResult setKeepCallbackAsBool:YES];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.messageReceiver];
+        replyHandler(message);
     });
+}
+
+// Received a message from WCSession.default.sendMessage - no replyHandler
+- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"WatchConnectivity :: didReceiveMessage :: msg: %@", message);
+        CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsDictionary : message];
+        [pluginResult setKeepCallbackAsBool:YES];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.messageReceiver];
+    });
+}
 }
 - (void)sendMessage:(CDVInvokedUrlCommand*)command {
     NSString* message = [[command arguments] objectAtIndex:0];
