@@ -46,7 +46,7 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.messageReceiver];
     });
 }
-}
+
 - (void)sendMessage:(CDVInvokedUrlCommand*)command {
     NSString* message = [[command arguments] objectAtIndex:0];
     if (message != nil) {
